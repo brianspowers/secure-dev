@@ -11,6 +11,7 @@
     "clean:web": "rimraf dist/web/*",
     "clean:onepage": "rimraf dist/onepage/*",
     "clean:pdf": "rimraf dist/*.pdf",
+    "deploy": "gh-pages -d dist/web",
     "analyze:web": "webpack-bundle-analyzer dist/web/stats.json"
   },
   "browserslist": [
@@ -31,6 +32,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^4.3.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.2.3",
     "html-loader": "^1.3.1",
     "html-webpack-plugin": "^4.5.0",
     "mdast-flatten-image-paragraphs": "^1.0.0",

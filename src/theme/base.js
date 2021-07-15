@@ -19,7 +19,7 @@ export default {
   },
   mdxp: {
     slide: {
-      fontSize: '32px',
+      fontSize: '42px',
     },
   },
   text: {
@@ -33,12 +33,7 @@ export default {
     root: {
       fontFamily: "system-ui, sans-serif",
     },
-    img: {
-      width: "100vw",
-      maxWidth: "100%",
-      height: "100vh",
-      objectFit: "contain",
-    },
+    img: {},
     h1: {
       variant: "text.heading",
     },

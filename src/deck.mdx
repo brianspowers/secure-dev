@@ -2,45 +2,168 @@
 
 ---
 
-# OWASP Top Ten
-A.	Overview
+# OWASP Top 10
+
+---
+
+# OWASP Logo
+
+## The Open Web Application Security Project
+
+> The Open Web Application Security Project® (OWASP) is a nonprofit foundation that works to improve the security of software. Through community-led open-source software projects, hundreds of local chapters worldwide, tens of thousands of members, and leading educational and training conferences, the OWASP Foundation is the source for developers and technologists to secure the web.
+
+---
+
+# Top 10 Web Application Security Risks
+
+<Step>
+
+- Injection
+- Broken Authentication
+- Sensitive Data Exposure
+- XML External Entities (XXE)
+- Broken Access Control
+- Security Misconfiguration
+- Cross-Site Scripting XSS
+- Insecure Deserialization
+- Using Components with Known Vulnerabilities
+- Insufficient Logging & Monitoring
+
+</Step>
+
+<Note>
+
+- Injection:
+  - Sending untrusted data to an interpreter - SQL Injection
+- Sensitive:
+  - Includes unencrypted or weakly encrypted data
+- Access Control:
+  - Restrictions not properly enforced.
+- Misconfiguration:
+  - Most commonly seen issue
+  - Default configs, open cloud storage
+- XSS:
+  - Execute scripts in the user's browser.
+- Deserialization:
+  - Leads to remote code execution
+- Logging:
+  - Lets attackers stay around
+
+</Note>
 
 ---
 
 # Cross-site scripting
-A.	XSS and CSRF
-B.	Live demo of an XSS + CSRF attack
-C.	Prevention
+
+---
+
+## Cross-site scripting
+
+- Code is injected into a trusted site.
+- User's browser executes the code as if it came from the site.
+- Malicious code has access to any browser data for that site.
+
+<Step>
+
+### Potentially compromised data
+
+<Step>
+
+- Cookies
+- Session tokens
+- Local storage
+
+</Step>
+
+</Step>
+
+---
+
+# Cross-site Requst Forgery
+
+---
+
+## Cross-site Requst Forgery
+Differs from the stuff in ways.
+
+---
+
+# CSRF Demo
+
+---
+
+# Prevention
+
+<Step> 
+
+<div>
+
+## XSS
+
+* Things
+* And
+* Stuff
+
+</div>
+
+<div>
+
+## CSRF
+
+<Step offset="1">
+
+* More
+* Things
+* Stuf
+
+</Step>
+
+</div>
+
+</Step>
 
 ---
 
 # Broken authentication
-A.	Session fixation / hijacking
-B.	Session ID best practices
-C.	httpOnly cookies
 
---- 
+---
+
+## Session fixation / hijacking
+
+---
+
+## Session ID best practices
+
+---
+
+## httpOnly cookies
+
+---
 
 # Broken access control
-A.	Client-side application security (doesn’t exist!)
-B.	Trust no one
-V.	Sensitive data exposure
-A.	Protecting data in a client-side application.
-B.	Transport Level Security
-C.	Password of the Day
+
+A. Client-side application security (doesn’t exist!)
+B. Trust no one
+V. Sensitive data exposure
+A. Protecting data in a client-side application.
+B. Transport Level Security
+C. Password of the Day
 
 ---
 
 # Components with known vulnerabilities
-A.	Codecov breach
-B.	Dependabot, npm audit
+
+A. Codecov breach
+B. Dependabot, npm audit
 
 ---
 
 # Content Security Policy and CORS
-A.	Overview & types of attacks they can prevent.
+
+A. Overview & types of attacks they can prevent.
 
 ---
 
 # Links
-* https://owasp.org/www-project-top-ten/
+
+- https://owasp.org/www-project-top-ten/

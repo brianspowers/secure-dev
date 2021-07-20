@@ -79,88 +79,203 @@
 
 ---
 
-# Cross-site Requst Forgery
+## 3 Types of XSS
+
+<Step>
+
+* Reflected XSS
+* Stored XSS
+* DOM XSS
+
+</Step>
 
 ---
 
-## Cross-site Requst Forgery
-Differs from the stuff in ways.
+## XSS Prevention
+
+<Step>
+
+* Input Sanitization
+* Output Escaping
+  * React escapes output by default!
+
+
+</Step>
+
+---
+
+# Cross-site Requst Forgery
+
+<Step>
+
+Causes a user to execute a web request they didn't intend to.
+
+Often initiated by a fraudulent link or email.
+
+</Step>
+
+<Note>
+
+Works because browsers send along session cookies with each request.
+
+</Note>
+
+---
+
+## CSRF Prevention
+
+<Step>
+
+  * Framework built-in protection
+  * CSRF Tokens
+  * User interaction protection
+  * Samesite cookie attribute
+  * Origin/Referer header checking
+  * Custom request headers
+
+</Step>
+
+<Note>
+
+Custom request headers works great for AJAX requests
+
+</Note>
 
 ---
 
 # CSRF Demo
 
----
-
-# Prevention
-
-<Step> 
-
-<div>
-
-## XSS
-
-* Things
-* And
-* Stuff
-
-</div>
-
-<div>
-
-## CSRF
-
-<Step offset="1">
-
-* More
-* Things
-* Stuf
-
-</Step>
-
-</div>
-
-</Step>
+Imagine this is a really sweet demo of an XSS flaw on one website being used to transfer money at a second site.
 
 ---
 
 # Broken authentication
 
+<Step>
+
+* Brute force / weak passwords
+* Weak forgot-password processes
+* Weak password encryption
+* Session ID mishandling
+  * Exposed in URL
+  * Not properly invalidated
+
+</Step>
+
+---
+
+## Authentication Attack Prevention
+
+<Step>
+
+* Multi-factor authentication
+* No default credentials
+* Encourage strong passwords / check for weak passwords
+* Limit or delay failed login attempts
+
+</Step>
+
 ---
 
 ## Session fixation / hijacking
 
----
-
-## Session ID best practices
+Impersonating a user by gaining access to a session identifier.
 
 ---
 
-## httpOnly cookies
+## Session best practices
+
+<Step>
+
+* Use an established, vetted session framework
+  * Unpredictable session ids
+  * Rotate identifiers
+* Limit session lifetime
+* Invalidate existing session upon login   
+* Use `httpOnly` cookies
+
+</Step>
 
 ---
 
 # Broken access control
+## Client-side application security doesn’t exist!
 
-A. Client-side application security (doesn’t exist!)
-B. Trust no one
-V. Sensitive data exposure
-A. Protecting data in a client-side application.
-B. Transport Level Security
-C. Password of the Day
+<Step>
+
+Assume the user can do anything at any time on your client application.
+
+</Step>
+
+---
+# Sensitive data exposure
+## Client-side application security (still) doesn’t exist!
+
+<Step>
+
+### Don't send anything Sensitive
+
+</Step>
+
+<Step offset={1}>
+
+* Encryption or other secret keys
+* User credentials
+* Password-of-the-day
+
+</Step>
+
+---
+
+## Protecting data in a client-side application.
+
+<Step>
+
+* Don't send secrets
+* Transport Level Security
+  * Google and HTTPS
+  * Let's Encrypt
+* Don't store more data than necessary
+* Encrypt data at rest
+
+</Step>
 
 ---
 
 # Components with known vulnerabilities
 
-A. Codecov breach
-B. Dependabot, npm audit
+<Step>
+
+## Examples
+
+</Step>
+
+<Step offset={1}>
+
+* SolarWinds
+* Codecov
+
+</Step>
+
+<Step offset={3}>
+
+## Mitigation
+
+</Step>
+
+<Step offset={4}>
+
+* Take security patches
+* `npm audit`
+* Github Dependabot
+
+</Step>
 
 ---
 
 # Content Security Policy and CORS
 
-A. Overview & types of attacks they can prevent.
+Determines which origins (other than its own) an application will allow loading resources from.
 
 ---
 
